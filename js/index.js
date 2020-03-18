@@ -119,3 +119,22 @@ init();
 
 form.addEventListener('submit', addTransaction);
 
+document.getElementsByClassName('.save')[0].onclick = function() {                  
+  var csv = '.history';
+  var csvData = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
+  this.href = csvData;
+  this.target = '_blank';
+  this.download = 'Expense Tracker.csv';
+};
+// нажаль зробити кнопочку зберігання ваших транзакцій окермим файлом не вдалося, почитавши купу інформації зрозумів
+// що на чистому js це зробити не реально, максимум чого добився це зберігання пустого ексель документу, в ньому я міг задати 
+// певні якісь дані, але якоїсь синхронізації з введиними даними на сайті не відбувалося
+/* document.getElementsByClasName('save')[0].onclick = function() {                  
+                        var csv = "ваші транзакції;
+                        var csvData = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
+                        this.href = csvData;
+                        this.target = '_blank';
+                        this.download = 'filename.csv';
+                    };
+*\
+// тому я тільки переклав його і спробував розбіратися з кодом не тільки цього проекту а й інших, коментарі автора дуже допомагають в цьому.

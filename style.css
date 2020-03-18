@@ -17,6 +17,8 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: 'Lato', sans-serif;
+  padding: 0;
+  background: linear-gradient(to right, rgb(233, 247, 223), rgb(25, 245, 212));
 }
 
 .container {
@@ -88,6 +90,18 @@ input[type='number'] {
 }
 
 .btn {
+  cursor: pointer;
+  background-color: #9c88ff;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+}
+.save {
   cursor: pointer;
   background-color: #9c88ff;
   box-shadow: var(--box-shadow);
